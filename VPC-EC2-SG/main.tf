@@ -1,10 +1,10 @@
-data "aws_ami" "al2023" {
+data "aws_ami" "Linux_server" {
   owners      = ["137112412989"] # AWS
   most_recent = true
 
   filter {
     name   = "name"
-    values = ["al2023-ami-*-x86_64"]
+    values = ["Linux_server-ami-*-x86_64"]
   }
   filter {
     name   = "architecture"
@@ -23,7 +23,7 @@ data "aws_vpc" "default" {
 
 # Create EC2 Instance EC2
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.al2023.id
+  ami           = data.aws_ami.Linux_server.id
   instance_type = var.instance_type
 
   # Attach the SG (use always vpc_security_group_ids in VPC)
