@@ -76,6 +76,4 @@ Terraform-Labs/
 
 ## Next Steps
 
-- Add more modules (Aurora, Route 53, ACM, etc.)  
-- Enhance CI/CD workflows with GitHub Actions  
-- Explore monitoring and observability (CloudWatch, Prometheus, etc.)
+- Add more modules 
